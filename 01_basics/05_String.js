@@ -39,6 +39,9 @@ console.log(url.replace("%20","_"))
 
 console.log(url.includes("vinit"));
 
+console.log(gameName.split('-'));
+
+
 
 // String Methods
 
