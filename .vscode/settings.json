@@ -4,6 +4,7 @@
         "accountstate",
         "addone",
         "anyobject",
+        "aurcode",
         "Cartprice",
         "coursename",
         "doga",
@@ -29,7 +30,9 @@
         "Secondvalue",
         "shaktiman",
         "Spiderman",
+        "Terniary",
         "userfullname",
+        "Userlogged",
         "vinit"
     ]
 }
