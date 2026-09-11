@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.canvas {
+    height: 372px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.canvas h1{
+    text-align: center;
+}
+
+.text-color {
+    text-align: center;
+}
+
+.canvas div{
+    background-color: #fff;
+    height: 10rem;
+    width: 10rem;
+    padding: 10px 30px;
+    margin: 50px 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #212121;
+    text-decoration: none;
+    border: 2px solid #212121;
+} 
+
+
+.text-section {
+    text-align: center;
+}
