@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: clamp(20px, 8vh, 100px) auto 20px;
+    padding: 40px 30px 50px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.row input {
+    flex: 1;
+    min-width: 0;            /* lets the input shrink on small screens */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;         /* 16px stops iOS zooming on focus */
+}
+
+.row button {
+    flex-shrink: 0;
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.row button:focus-visible,
+ul li .delete:focus-visible {
+    outline: 2px solid #002765;
+    outline-offset: 2px;
+}
+
+ul { list-style: none; }
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 48px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-height: 52px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(./images/checked.png);
+}
+
+ul li .delete {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ul li .delete:hover { background-color: #edeef0; }
+
+.empty {
+    text-align: center;
+    color: #777;
+    font-size: 15px;
+    padding: 12px 0;
+    cursor: default;
+}
+.empty::before { display: none; }
+
+/* Tablets and phones */
+@media (max-width: 600px) {
+    .container { padding: 8px; }
+    .todo-app { margin-top: 24px; padding: 28px 18px 36px; }
+    .row { padding-left: 14px; }
+    .row button { padding: 14px 28px; }
+    ul li { font-size: 16px; }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .todo-app { padding: 22px 12px 28px; }
+    .row button { padding: 14px 20px; font-size: 15px; }
+    ul li { padding-left: 44px; }
+    ul li::before { height: 24px; width: 24px; left: 6px; top: 14px; }
+}
