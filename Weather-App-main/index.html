@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <!-- material icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="weather-app">
+        <form action="" class="search-form">
+            <input type="text" class="city-input" placeholder="Enter Your City">
+
+            <button class="search-btn">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
+
+        <div class="city-date-section">
+            <h2 class="city">Ahmedabad</h2>
+            <p class="date">28 oct 2024</p>
+        </div>
+
+        <div class="temperature-info">
+            <div class="description">
+                <!-- <i class="bi bi-brightness-high-fill"></i> -->
+                <img id="weather-icon" src=""  />
+                <span class="description-text">Sunny</span>
+            </div>
+            <div class="temp">20°</div>
+        </div>
+
+        <div class="additional-info">
+            <div class="wind-info">
+                <i class="bi bi-wind"></i>
+                <div>
+                    <h3 class="wind-speed">4 km/h</h3>
+                    <p class="wind-label">Wind</p>
+                </div>
+            </div>
+
+            <div class="humidity-info">
+                <i class="bi bi-droplet"></i>
+                <div>
+                    <h3 class="humidity">45%</h3>
+                    <p class="humidity-label">humidity</p>
+                </div>
+            </div>
+
+            <div class="visibility-info">
+                <i class="bi bi-eye"></i>
+                <div>
+                    <h3 class="visibility-distance">4 KM/H</h3>
+                    <p class="viewport">visibility</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
