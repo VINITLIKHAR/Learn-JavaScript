@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Color Palette Generator - Create beautiful color palettes">
+    <meta name="theme-color" content="#007BFF">
+    <title>Color Palette Generator | Create Beautiful Color Schemes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <i class="fas fa-palette"></i>
+                <span>ColorPaletteGen</span>
+            </div>
+            <div class="navbar-menu">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <h1>Interactive Color Palette Generator</h1>
+            <p>Create beautiful color palettes, save them, and download as images</p>
+        </header>
+
+        <!-- Palette Container -->
+        <div class="palette-container">
+            <!-- Controls Section -->
+            <div class="controls-section">
+                <div class="control-group">
+                    <label for="palette-mode">Palette Mode:</label>
+                    <select id="palette-mode" class="form-control">
+                        <option value="random">Random</option>
+                        <option value="pastel">Pastel</option>
+                        <option value="vibrant">Vibrant</option>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="palette-count">Number of Colors:</label>
+                    <input type="number" id="palette-count" class="form-control" min="3" max="10" value="5">
+                </div>
+
+                <button id="generate-palette" class="btn btn-primary btn-large">
+                    <i class="fas fa-sync-alt"></i> Generate Palette
+                </button>
+            </div>
+
+            <!-- Color Palette Display -->
+            <div id="color-palette" class="color-palette">
+                <!-- Colors will be dynamically generated here -->
+            </div>
+
+            <!-- Actions Section -->
+            <div class="actions-section">
+                <button id="save-palette" class="btn btn-secondary">
+                    <i class="fas fa-save"></i> Save
+                </button>
+                <button id="load-palette" class="btn btn-secondary">
+                    <i class="fas fa-folder-open"></i> Load
+                </button>
+                <button id="download-palette" class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Download PNG
+                </button>
+                <button id="download-json" class="btn btn-secondary">
+                    <i class="fas fa-file-code"></i> Export JSON
+                </button>
+                <button id="copy-all" class="btn btn-secondary">
+                    <i class="fas fa-copy"></i> Copy All
+                </button>
+            </div>
+        </div>
+
+        <!-- Saved Palettes Section -->
+        <div class="saved-palettes-section">
+            <h2><i class="fas fa-history"></i> Saved Palettes</h2>
+            <div id="saved-palettes-list" class="saved-palettes-list">
+                <!-- Saved palettes will appear here -->
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div class="info-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Click on Colors</h3>
+                <p>Click any color to copy its hex code to clipboard</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-star"></i>
+                <h3>Save Palettes</h3>
+                <p>Save your favorite palettes for later use</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-download"></i>
+                <h3>Export Options</h3>
+                <p>Download as PNG or export as JSON</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
